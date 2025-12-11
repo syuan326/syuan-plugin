@@ -1,56 +1,60 @@
-
+import plugin from '../../lib/plugins/plugin.js'
 
 export class TailHook extends plugin {
-  constructor() {
+  constructor () {
     super({
       name: 'Yunzai消息尾巴Hook',
       dsc: '拦截所有 e.reply / bot.sendMsg 自动加尾巴',
-      event: 'message',
-      priority: -99999,
+      event: 'bot.connect',
+      priority: 999999,
       rule: []
     })
-
-    this.patch()
   }
 
-  patch() {
+  async botConnect () {
     const Bot = global.Bot
-    if (!Bot) return
+    if (!Bot) {
+      logger.info('[TailHook] Bot 未初始化，跳过')
+      return
+    }
 
     if (Bot._tailPatched) {
-      logger.log("[TailHook] 已加载，无需重复Patch")
+      logger.info('[TailHook] 已经 Hook 过了，跳过')
       return
     }
     Bot._tailPatched = true
 
-    // 兼容多账号
+    // 多账号情况
     const bots = Bot.uin ? [Bot] : Object.values(Bot)
 
     for (const bot of bots) {
+      if (!bot.sendMsg) {
+        logger.info('[TailHook] bot.sendMsg 不存在，跳过该账号')
+        continue
+      }
+
       const _sendMsg = bot.sendMsg.bind(bot)
 
       bot.sendMsg = async function (data) {
         try {
-          // 纯文本消息直接加尾巴
-          if (typeof data.msg === "string") {
-            data.msg += "\n—— 来自你的 Bot"
+          if (typeof data.msg === 'string') {
+            data.msg += '\n—— 来自你的 Bot'
           }
 
-          // 元素列表（数组），如 segment.at() 之类
           if (Array.isArray(data.msg)) {
             data.msg.push({
-              type: "text",
-              text: "\n—— 来自你的 Bot"
+              type: 'text',
+              text: '\n—— 来自你的 Bot'
             })
           }
         } catch (err) {
-          logger.log("[TailHook] 尾巴处理失败：", err)
+          logger.info('[TailHook] 尾巴处理异常：', err)
         }
 
         return await _sendMsg(data)
       }
-    }
 
-    logger.log("【TailHook】成功 Hook 住 bot.sendMsg，所有 e.reply 消息已自动加尾巴")
+      logger.info(`[TailHook] 已 Hook bot(${bot.uin}) 发送消息`)
+    }
   }
 }
