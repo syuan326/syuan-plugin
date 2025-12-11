@@ -4,25 +4,22 @@
 #title大字
 #desc小字
 #按你的需求修改
-- group: 娱乐帮助
+- group: Yunzai-Bot功能
   list:
     - icon: flower_1
-      title: '#清语表情列表'
+      title: '#清语表情列表 #清语表情帮助'
       desc: '查看可合成表情列表，如#吸'
-    - icon: flower_2
-      title: '#清语表情搜索[关键字]'
-      desc: '搜索表情里含关键字的表情'
-    - icon: wave
-      title: '和我对话'
-      desc: '以小罐头开头对话，只支持文字'
+    # - icon: wave
+    #   title: '和我对话'
+    #   desc: '以小罐头开头对话，只支持文字'
     - icon: switch
-      title: '调戏罐头'
-      desc: '戳bot随机回复文字语音图片'
+      title: '#联系主人'
+      desc: '联系主人'
     - icon: archaic_stone
       title: '#撤回'
       desc: '@机器人发送的消息发送#撤回即可撤回'
     - icon: restaurant_smoothie
-      title: '开盒@某人'
+      title: '开盒@某人 你几把谁啊'
       desc: '其实是看该用户的资料。必须要@某人才能用'
     - icon: spring_of_pure_sacred_dewdrop
       title: 'bilibili视频解析'
@@ -45,102 +42,111 @@
     - icon: coin
       title: '#wwcos'
       desc: '查看鸣潮cos'
-
-- group: 原神功能
-  list:
     - icon: 绑定账号
       title: '#扫码登录'
       desc: '绑定米游社cookie'
-    - icon: 钓鱼
-      title: '#我的ck #删除ck'
-      desc: '查看绑定的cookie 删除cookie'
     - icon: 风车
-      title: '#uid #绑定123456789'
-      desc: '查看绑定的uid 绑定uid'
-    - icon: paimon
-      title: '#米游社更新面板'
-      desc: '需要扫码登录'
-    - icon: 雷神瞳共鸣石
-      title: '#原石 #原石统计'
-      desc: '札记数据，需要绑定Cookie'
-    - icon: 树脂
-      title: '#体力 #体力帮助'
-      desc: '查询体力，绑定Cookie帮助'
-    - icon: 史莱姆
-      title: '#日历 #日历列表'
-      desc: '查看活动日历'
-    - icon: 星辉
-      title: '#抽卡记录 #记录帮助'
-      desc: '札记数据，需要绑定Cookie'
-    - icon: 原石
       title: '#喵喵帮助'
-      desc: '原神帮助'
-    - icon: 纠缠之缘
-      title: '#面板帮助'
-      desc: '原神查询面板指引'
-    - icon: 风车
-      title: '#深渊'
-      desc: '打完2小时后查看'
-    - icon: paimon
-      title: '#幻想'
-      desc: '幻想挑战记录'
-    - icon: 派蒙
-      title: '#幽境'
-      desc: '幽境危战挑战数据'
-    - icon: 刻晴
-      title: '角色面板替换'
-      desc: '详见#面板帮助'
-    - icon: 米游社
-      title: '#宵宫攻略'
-      desc: '米游社的角色攻略'
-
-- group: 崩铁功能
-  list:
-    - icon: 米游社
-      title: '#扫码登录'
-      desc: '绑定米游社cookie'
+      desc: '原神功能帮助'
     - icon: 三月七
-      title: '*绑定uid[uid]'
-      desc: '绑定你的星铁uid'
-    - icon: abyss
-      title: '*更新面板[uid]'
-      desc: '更新你的面板'
-    - icon: 米游社
-      title: '*米游社更新面板'
-      desc: '需要扫码登录'
-    - icon: role
-      title: '*黑塔面板'
-      desc: '查看角色面板'
+      title: '*帮助 sr帮助'
+      desc: '星铁功能帮助'
+    - icon: 史莱姆
+      title: '悠悠帮助'
+      desc: '蓝色星原·旅谣功能帮助'
+
+- group: Astrbot功能
+  list:
+    - icon: 绑定账号
+      title: '/pig'
+      desc: '随机猪猪图片'
+    - icon: 钓鱼
+      title: '🦌帮助'
+      desc: '🦌签到'
+    - icon: 风车
+      title: '赞我'
+      desc: '点10个赞'
+    - icon: paimon
+      title: '/裁剪 4x6'
+      desc: '图片裁剪4行6列，x是字母'
+    - icon: 雷神瞳共鸣石
+      title: '/盒@某人'
+      desc: '盒某人，与上面的盒不一样'
+    # - icon: 树脂
+    #   title: '#体力 #体力帮助'
+    #   desc: '查询体力，绑定Cookie帮助'
+    # - icon: 史莱姆
+    #   title: '#日历 #日历列表'
+    #   desc: '查看活动日历'
+    # - icon: 星辉
+    #   title: '#抽卡记录 #记录帮助'
+    #   desc: '札记数据，需要绑定Cookie'
+    # - icon: 原石
+    #   title: '#喵喵帮助'
+    #   desc: '原神帮助'
+    # - icon: 纠缠之缘
+    #   title: '#面板帮助'
+    #   desc: '原神查询面板指引'
+    # - icon: 风车
+    #   title: '#深渊'
+    #   desc: '打完2小时后查看'
+    # - icon: paimon
+    #   title: '#幻想'
+    #   desc: '幻想挑战记录'
+    # - icon: 派蒙
+    #   title: '#幽境'
+    #   desc: '幽境危战挑战数据'
+    # - icon: 刻晴
+    #   title: '角色面板替换'
+    #   desc: '详见#面板帮助'
+    # - icon: 米游社
+    #   title: '#宵宫攻略'
+    #   desc: '米游社的角色攻略'
+
+- group: GsCore功能
+  list:
     - icon: romaritime_flower
-      title: '*收入'
-      desc: '查看星琼收入，需Cookie'
+      title: 'core帮助'
+      desc: 'GsCore帮助'
+    - icon: abyss
+      title: 'sch帮助'
+      desc: '鸣潮功能帮助'
+    - icon: role
+      title: '谁at我'
+      desc: '图片查看谁@我'
+    # - icon: role
+    #   title: '*黑塔面板'
+    #   desc: '查看角色面板'
+    # - icon: romaritime_flower
+    #   title: '*收入'
+    #   desc: '查看星琼收入，需Cookie'
     - icon: 树脂
-      title: '*体力'
-      desc: '需Cookie'
+      title: 'sch[角色]4c'
+      desc: '不支持引用'
     - icon: 攻略
-      title: '*黑塔攻略'
-      desc: '米游社的角色攻略'
-    - icon: 统计
-      title: '*忘却'
-      desc: '忘却之庭数据'
-    - icon: 问号
-      title: '*末日'
-      desc: '末日幻影数据'
-    - icon: pamu
-      title: '*虚构'
-      desc: '虚构叙事数据'
-    - icon: 养成计算
-      title: '*深渊'
-      desc: '获取全部深渊数据'
-    - icon: 原石
-      title: '*抽卡记录'
-      desc: '抽卡记录帮助'
-    - icon: 纠缠之缘
-      title: '*抽卡链接'
-      desc: '绑定抽卡链接'
-    - icon: 星辉
-      title: '*更新跃迁/抽卡'
-      desc: '更新本地抽卡记录'
-    - icon: 记录
-      title: '*跃迁分析[角色/光锥/常驻]'
-      desc: '抽卡分析默认为总览'
+      title: 'sch梭哈帮助'
+      desc: '抽声骸'
+    # - icon: 统计
+    #   title: '*忘却'
+    #   desc: '忘却之庭数据'
+    # - icon: 问号
+    #   title: '*末日'
+    #   desc: '末日幻影数据'
+    # - icon: pamu
+    #   title: '*虚构'
+    #   desc: '虚构叙事数据'
+    # - icon: 养成计算
+    #   title: '*深渊'
+    #   desc: '获取全部深渊数据'
+    # - icon: 原石
+    #   title: '*抽卡记录'
+    #   desc: '抽卡记录帮助'
+    # - icon: 纠缠之缘
+    #   title: '*抽卡链接'
+    #   desc: '绑定抽卡链接'
+    # - icon: 星辉
+    #   title: '*更新跃迁/抽卡'
+    #   desc: '更新本地抽卡记录'
+    # - icon: 记录
+    #   title: '*跃迁分析[角色/光锥/常驻]'
+    #   desc: '抽卡分析默认为总览'
