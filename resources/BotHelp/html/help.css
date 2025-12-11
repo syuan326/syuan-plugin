@@ -144,7 +144,7 @@ body {
 
 .tab_lable::before,
 .tab_lable::after {
-  content: "———————————————";
+  content: "———————————";
   display: inline-block;
   margin: 0 8px;
   opacity: 0.6;
