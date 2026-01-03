@@ -35,7 +35,7 @@ export class run extends plugin {
             msg = `${this.e.user_id} ${this.tips}`
         }
         logger.mark(`[退出通知]${this.e.logText} ${msg}`)
-        // await NapCatAPI.sendGroupMsg(which(e.self_id), e.group_id, msg)
+        await NapCatAPI.sendGroupMsg(which(e.self_id), e.group_id, msg)
         await NapCatAPI.sendRun(which(e.self_id), e.group_id)
 
 
