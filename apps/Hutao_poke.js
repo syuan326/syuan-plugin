@@ -60,7 +60,7 @@ const mood = [
     '平静的(￣ー￣)',
 ]
 
-const napcatUrl = "http://napcat_3:3000"
+const napcatUrl = "http://127.0.0.1:13002"
 const url = path.join(paths.pluginResourcesPath, 'hutao_poke')
 const pokeUrl = path.join(url, 'poke')
 const angryUrl = path.join(url, 'angry')
