@@ -86,12 +86,8 @@ export class chuo extends plugin {
         )
     }
 
-    async chuoyichuo(e){
-        if(e.self_id != 2239841632)return
-        return await this.chuoyichuo1(e)
-    }
 
-    async chuoyichuo1(e) {
+    async chuoyichuo(e) {
         /* operator_id是主动戳人的id
         * self_id是机器人id
         * target_id是被戳的id
