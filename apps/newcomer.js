@@ -16,7 +16,7 @@ export class newcomer extends plugin {
         /** 冷却cd 0s */
         let cd = 1
         let output;
-        const Default = '欢迎新人呀，可以点击以下链接查看本bot帮助\nhttps://blog.pardofelis.icu/posts/1da0051f0357/'
+        const Default = '欢迎新人呀'
         if (this.e.user_id == this.e.bot.uin) return
 
         /** cd */
