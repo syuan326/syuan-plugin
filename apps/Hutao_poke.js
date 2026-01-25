@@ -36,7 +36,7 @@ let mutetime = 0 //禁言时间设置，单位分钟，如果设置0则为自动
 const botIds = [2239841632, 3210532108]
 
 let data = {}
-const dataurl = path.join(paths.pluginDataPath,  'pardofelispoke.yaml')
+const dataurl = path.join(paths.pluginDataPath,  'hutaopoke.yaml')
 try {
     const f = await fs.readFile(dataurl, 'utf8');
     data = YAML.parse(f);
@@ -61,7 +61,7 @@ const mood = [
 ]
 
 const napcatUrl = "http://napcat_1:3000"
-const url = path.join(paths.pluginResourcesPath, 'poke')
+const url = path.join(paths.pluginResourcesPath, 'hutao_poke')
 const pokeUrl = path.join(url, 'poke')
 const angryUrl = path.join(url, 'angry')
 const arronganceUrl = path.join(url, 'arrogance')
@@ -87,7 +87,7 @@ export class chuo extends plugin {
     }
 
     async chuoyichuo(e){
-        if(e.self_id != 2239841632)return
+        if(e.self_id != 3210532108)return
         return await this.chuoyichuo1(e)
     }
 
@@ -228,7 +228,7 @@ export class chuo extends plugin {
                         body: JSON.stringify({
                             model: "deepseek-v3",
                             messages: [
-                                { role: "system", content: `你是一只名叫罐头的小猫咪，你现在的心情是${mood[text_number - 1]}，请根据这个心情来回复用户。每句话结尾都要加一个喵字。` },
+                                { role: "system", content: `你是一只名叫胡桃的小猫咪，你现在的心情是${mood[text_number - 1]}，请根据这个心情来回复用户。每句话结尾都要加一个喵字。` },
                                 {
                                     role: "user",
                                     content: `用户名:${e.sender.nickname}，userid:${e.user_id} 戳了一下你，你要根据你的心情并且使用不超过8个字来回复他喵，这是部分回复内容：${word_list.join('，')}。`
