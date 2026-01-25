@@ -39,11 +39,11 @@ export class Good extends plugin {
             priority: 500,
             rule: [
                 {
-                    reg: '#赞我',
+                    reg: '赞我',
                     fnc: 'thumbsUpMe'
                 },
                 {
-                    reg: '#全赞',
+                    reg: '全赞',
                     fnc: 'thumbsUpAll'
                 }
             ]
