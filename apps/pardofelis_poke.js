@@ -60,7 +60,7 @@ const mood = [
     '平静的(￣ー￣)',
 ]
 
-const napcatUrl = "http://10.1.0.15:3000"
+const napcatUrl = "http://napcat_1:3000"
 const url = path.join(paths.pluginResourcesPath, 'poke')
 const pokeUrl = path.join(url, 'poke')
 const angryUrl = path.join(url, 'angry')
@@ -86,7 +86,12 @@ export class chuo extends plugin {
         )
     }
 
-    async chuoyichuo(e) {
+    async chuoyichuo(e){
+        if(e.self_id != 2239841632)return
+        return await this.chuoyichuo1(e)
+    }
+
+    async chuoyichuo1(e) {
         /* operator_id是主动戳人的id
         * self_id是机器人id
         * target_id是被戳的id
