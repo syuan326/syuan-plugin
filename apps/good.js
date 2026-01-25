@@ -2,7 +2,7 @@
 * 点赞功能
 * NAPCAT_HTTP_223和NAPCAT_HTTP_304是url常量在tools/constant.js
 */
-import { paths, NAPCAT_HTTP_223, NAPCAT_HTTP_304, sleep, isMaster } from '../tools/index.js'
+import { paths, NAPCAT_HTTP_223, NAPCAT_HTTP_304,NAPCAT_HTTP_321, sleep, isMaster } from '../tools/index.js'
 import NapCatAPI from '../tools/napcat-http.js'
 import path from 'path'
 import fs from 'fs';
@@ -107,7 +107,9 @@ export class Good extends plugin {
         for (let qq of Object.keys(thumbsUpMelist)) {
             await NapCatAPI.thumbsUp(NAPCAT_HTTP_223, qq, thumbsUpMe_sum)
             await sleep(2000)
-            //   await NapCatAPI.thumbsUp(NAPCAT_HTTP_304, qq, thumbsUpMe_sum)
+            await NapCatAPI.thumbsUp(NAPCAT_HTTP_304, qq, thumbsUpMe_sum)
+            await sleep(2000)
+            await NapCatAPI.thumbsUp(NAPCAT_HTTP_321, qq, thumbsUpMe_sum)
             logger.mark(`[syuan-plugin][自动点赞] 已给QQ${qq}点赞${thumbsUpMe_sum}次`)
             if (thumbsUpMelist[qq].push) {
                 NapCatAPI.sendPrivateMsg(NAPCAT_HTTP_223, qq, thumbsUpMelist[qq].group, say)
@@ -154,7 +156,9 @@ schedule.scheduleJob('00 00 10 * * *', async () => {
     for (let qq of Object.keys(thumbsUpMelist)) {
         await NapCatAPI.thumbsUp(NAPCAT_HTTP_223, qq, thumbsUpMe_sum)
         await sleep(2000)
-        // await NapCatAPI.thumbsUp(NAPCAT_HTTP_304, qq, thumbsUpMe_sum)
+        await NapCatAPI.thumbsUp(NAPCAT_HTTP_304, qq, thumbsUpMe_sum)
+        await sleep(2000)
+        await NapCatAPI.thumbsUp(NAPCAT_HTTP_321, qq, thumbsUpMe_sum)
         logger.mark(`[syuan-plugin][自动点赞] 已给QQ${qq}点赞${thumbsUpMe_sum}次`)
         if (thumbsUpMelist[qq].push) {
             NapCatAPI.sendPrivateMsg(NAPCAT_HTTP_223, qq, thumbsUpMelist[qq].group, say)
@@ -169,6 +173,9 @@ schedule.scheduleJob('00 00 10 * * *', async () => {
 function which(uid) {
     if (String(uid) === "2239841632") {
         return NAPCAT_HTTP_223
+    }
+    else if(String(uid) === "3210532108"){
+        return NAPCAT_HTTP_321
     }
     else {
         return NAPCAT_HTTP_304
