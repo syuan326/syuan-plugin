@@ -18,7 +18,7 @@ export class run extends plugin {
         })
 
         /** 退群提示词 */
-        this.tips = '跑路了'
+        this.tips = '跑路了喵'
     }
 
     async accept(e) {

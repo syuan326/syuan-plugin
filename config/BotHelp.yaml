@@ -16,8 +16,8 @@
       title: '#联系主人'
       desc: '联系主人'
     - icon: archaic_stone
-      title: '#撤回'
-      desc: '@机器人发送的消息发送#撤回即可撤回'
+      title: '撤回'
+      desc: '引用机器人发送的消息发送撤回即可撤回'
     - icon: restaurant_smoothie
       title: '开盒@某人 你几把谁啊'
       desc: '其实是看该用户的资料。必须要@某人才能用'
@@ -28,7 +28,7 @@
       title: '#水群榜'
       desc: '查看本群发言排行'
     - icon: coin
-      title: '#今日运势'
+      title: '#今日运势 jrys'
       desc: '查看今天运势（娱乐）'
     - icon: wisdom
       title: '#悔签'
@@ -109,7 +109,7 @@
       title: 'core帮助'
       desc: 'GsCore帮助'
     - icon: abyss
-      title: 'sch帮助'
+      title: 'ww帮助'
       desc: '鸣潮功能帮助'
     - icon: role
       title: '谁at我'
@@ -132,9 +132,9 @@
     # - icon: 问号
     #   title: '*末日'
     #   desc: '末日幻影数据'
-    # - icon: pamu
-    #   title: '*虚构'
-    #   desc: '虚构叙事数据'
+    - icon: pamu
+      title: 'end'
+      desc: '终末地插件帮助'
     # - icon: 养成计算
     #   title: '*深渊'
     #   desc: '获取全部深渊数据'
