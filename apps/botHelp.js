@@ -30,9 +30,17 @@ export class botHelp extends plugin {
                 {
                     reg: '^(#|/)?(帮助|菜单|help|功能|说明|指令|使用说明|命令)(列表)?$',
                     fnc: 'help'
+                },
+                {
+                    reg: '#今日运势',
+                    fnc: 'jrys'
                 }
             ]
         })
+    }
+
+    async jrys(e) {
+        return e.reply('没有悔签了喵😭')
     }
 
     async help(e) {
