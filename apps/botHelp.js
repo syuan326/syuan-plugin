@@ -36,7 +36,6 @@ export class botHelp extends plugin {
     }
 
     async help(e) {
-        return true
         let { img } = await image({
             saveId: 'help',
             cwd: paths.pluginPath,
