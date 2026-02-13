@@ -38,7 +38,7 @@ export class UpdateMemeRepos extends plugin {
 
                 // 更新仓库 + 重启 systemd 服务（只输出仓库名）
                 const cmd = `
-cd /root/meme-data/memes &&
+cd /root/meme_img &&
 for d in */; do
   cd "$d" &&
   if [ -d ".git" ]; then
@@ -51,21 +51,9 @@ for d in */; do
   cd ..
 done &&
 
-echo "✅ 所有仓库更新完成"
-
-# 通过 tmux 重启服务
-if tmux has-session -t meme 2>/dev/null; then
-  # 发送两次 Ctrl+C 确保停止
-  tmux send-keys -t meme C-c
-  sleep 5
-  tmux send-keys -t meme C-c
-  sleep 5
-  # 重新启动服务
-  tmux send-keys -t meme "cd ~/meme && meme run" Enter
-  echo "✅ meme 服务已通过 tmux 重启"
-else
-  echo "❌ 未找到 meme_service tmux 会话"
-fi
+echo "✅ 仓库更新完成" &&
+systemctl restart meme-service.service &&
+echo "✅ Systemd 服务已重启"
 `
                 conn.exec(cmd, { pty: true }, (err, stream) => {
                     if (err) {
