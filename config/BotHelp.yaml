@@ -30,9 +30,9 @@
     - icon: coin
       title: '#今日运势 jrys'
       desc: '查看今天运势（娱乐）'
-    - icon: wisdom
-      title: '#悔签'
-      desc: '每天悔一次，悔完可以再抽一次运势'
+    # - icon: wisdom
+    #   title: '#悔签'
+    #   desc: '每天悔一次，悔完可以再抽一次运势'
     - icon: lumidouce_bell
       title: '#今日doro结局'
       desc: '每天一次'
@@ -121,10 +121,10 @@
     #   title: '*收入'
     #   desc: '查看星琼收入，需Cookie'
     - icon: 树脂
-      title: 'sch[角色]4c'
+      title: 'ww[角色]4c'
       desc: '不支持引用'
     - icon: 攻略
-      title: 'sch梭哈帮助'
+      title: 'ww梭哈帮助'
       desc: '抽声骸'
     # - icon: 统计
     #   title: '*忘却'
@@ -133,7 +133,7 @@
     #   title: '*末日'
     #   desc: '末日幻影数据'
     - icon: pamu
-      title: 'end'
+      title: 'end帮助'
       desc: '终末地插件帮助'
     # - icon: 养成计算
     #   title: '*深渊'
