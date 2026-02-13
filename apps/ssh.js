@@ -52,7 +52,7 @@ for d in */; do
 done &&
 
 echo "✅ 仓库更新完成" &&
-systemctl restart meme-service.service &&
+systemctl restart meme.service &&
 echo "✅ Systemd 服务已重启"
 `
                 conn.exec(cmd, { pty: true }, (err, stream) => {
