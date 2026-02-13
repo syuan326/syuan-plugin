@@ -38,7 +38,7 @@ export class UpdateMemeRepos extends plugin {
 
                 // 更新仓库 + 重启 systemd 服务（只输出仓库名）
                 const cmd = `
-cd /root/meme_img &&
+cd /root/meme/meme_img &&
 for d in */; do
   cd "$d" &&
   if [ -d ".git" ]; then
