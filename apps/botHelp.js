@@ -40,7 +40,7 @@ export class botHelp extends plugin {
     }
 
     async jrys(e) {
-        return e.reply('没有悔签了喵😭')
+        return 
     }
 
     async help(e) {
