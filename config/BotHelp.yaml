@@ -7,7 +7,7 @@
 - group: Yunzai-Bot功能
   list:
     - icon: flower_1
-      title: '#清语表情列表 #清语表情帮助'
+      title: 'meme列表 meme帮助'
       desc: '查看可合成表情列表，如#吸'
     # - icon: wave
     #   title: '和我对话'
