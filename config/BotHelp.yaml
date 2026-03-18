@@ -28,7 +28,7 @@
       title: '#水群榜'
       desc: '查看本群发言排行'
     - icon: coin
-      title: '#今日运势 jrys'
+      title: 'jrys'
       desc: '查看今天运势（娱乐）'
     # - icon: wisdom
     #   title: '#悔签'
@@ -51,9 +51,6 @@
     - icon: 三月七
       title: '*帮助 sr帮助'
       desc: '星铁功能帮助'
-    - icon: 史莱姆
-      title: '悠悠帮助'
-      desc: '蓝色星原·旅谣功能帮助'
 
 - group: Astrbot功能
   list:
